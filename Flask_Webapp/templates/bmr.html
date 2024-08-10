@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    BMR calculator
+{% endblock %}
+
+
+{% block content %}
+
+<div class="footer_section layout_padding">
+  <div class="footer_main">
+    <div class="col-lg-6" style="float:none;margin:auto;">  
+            <h1 class="landing_text"> Calculate Your BMR </h1>
+            <h2> </h2>
+            <form action="" method="POST">
+                <div class="txt_field2">
+                    <input type="text" name="age" required>
+                    <span></span>
+                    <label>Age</label>
+                </div>
+                <div class="txt_field2">
+                    <input type="text" name="weight" required>
+                    <span></span>
+                    <label>Weight(kg)</label>
+                </div>
+                <div class="txt_field2">
+                  <input type="text" name="height" required>
+                  <span></span>
+                  <label>Height(cm)</label>
+                </div>
+                <div class="txt_field2">
+                  <input type="text" name="gender" required>
+                  <span></span>
+                  <label>Gender(female/male)</label>
+                </div>
+
+                
+                <div class="read_bt_main1">
+                  <button class="button-73" role="button" onClick="window.location.href='#down1'"  >Calculate</button>
+                </div>
+            </form>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="container" >
+    <div  class="about_bg">
+        <h2 class="about_text" >YOUR BMR IS  :  {{ bmr_result }}  </h2><br>
+            <h6  class="ipsum_text"> This is the minimum number of calories that your body needs to perform basic functions </h6>
+    
+              <div id="down1"><a href="down1"></a> </div>
+              <div>
+                <table class="styled-table">
+                  <thead>
+                      <tr>
+                          <th>Age Range</th>
+                          <th>Gender</th>
+                          <th>BMR Range (kcal/day)</th>
+                      </tr>
+                  </thead>
+                  
+                  <tbody>
+                      <tr>
+                          <td>18-29</td>
+                          <td>Male</td>
+                          <td>1,800-2,400</td>
+                      </tr>
+                      <tr>
+                        <td>18-29</td>
+                        <td>Female</td>
+                        <td>1,400-2,000</td>
+                      </tr>
+                      <tr>
+                        <td>30-59</td>
+                        <td>Male</td>
+                        <td>1,600-2,200</td>
+                      </tr>
+                      <tr>
+                        <td>30-59</td>
+                        <td>Female</td>
+                        <td>1,200-1,800</td>
+                      </tr>
+                      <tr>
+                        <td>60+</td>
+                        <td>Male</td>
+                        <td>1,400-2,000</td>
+                      </tr>            
+                      <tr>
+                        <td>60+</td>
+                        <td>Female</td>
+                        <td>1,200-1,600</td>
+                      </tr>            
+                      <tr class="active-row">
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+    </div>
+</div>
+
+
+{% endblock %}

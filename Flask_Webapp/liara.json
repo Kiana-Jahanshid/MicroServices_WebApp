@@ -1,0 +1,8 @@
+{
+    "disks": [
+      {
+        "name": "quartdisk",
+        "mountTo": "/static/uploads"
+      }
+    ]
+}

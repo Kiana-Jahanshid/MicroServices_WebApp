@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    pose detection
+{% endblock %}
+
+
+{% block content %}
+<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+
+<style>
+  body {
+      margin: 0;
+      padding: 0;
+      background-image: url('static/images/ban9.jpg'); /* Replace with your image URL */
+      background-repeat: repeat;
+      background-attachment:initial;
+      background-size:cover; /* Ensure the image is displayed at its original size */
+  }
+  
+  .content {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+  }
+</style>
+
+<!-- <section class="myform-area"> -->
+  <div class="container" >
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+          <h1 style="text-align: center; font-size: 40px; padding-top: 140px; color:white"><b>Pose detection using the MediaPipe PoseLandmarker</b></h1>
+          <section id="demos">
+            <h3 style="text-align: center; padding-top: 30px; padding-bottom: 30px; color:rgb(202, 113, 254)">Stand in front of your webcam to get real-time pose landmarker detection.</h3>
+            <h5 style="text-align: center;"><b>Click to enable webcam</b></h5>
+            <div id="liveView" class="videoView" style="padding-left: 125px;">
+              <button id="webcamButton" class="mdc-button mdc-button--raised"  style="border-radius: 30px; width: 175px;  height: 45px; margin-left: 153px; background:#e0a8fe ; margin-bottom: 10px;">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__label">ENABLE WEBCAM</span>
+              </button>
+              <div style="position: relative;">
+                <video id="webcam" style="width: 1640px; height: 1040px; position: abso" autoplay playsinline></video>
+                <canvas class="output_canvas" id="output_canvas" width="1640" height="1040" style="position: absolute; left: 0px; top: 0px;"></canvas>
+              </div>
+            </div>
+          </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script type="module" src="static/js/pose-detection.js"></script>
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+
+{% endblock %}
