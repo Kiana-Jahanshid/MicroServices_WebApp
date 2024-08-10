@@ -14,8 +14,8 @@ services:
         # informations inside the docker , will be saved outside of docker as well , so they wont be deleted 
   
 
-  webapp:
-    image: webapp
+  AIwebapp:
+    image: AIwebapp
     container_name: quart_webapp
     build:
       context: .
@@ -30,14 +30,26 @@ services:
       - postgres  
 
 
-  api_app:
-    image: fastapi
-    container_name: api_app
+  face_analysis:
+    image: face_analysis_fastapi
+    container_name: FaceAnalysis
     networks:
       - mynetwork
     volumes:
       - ".:/app"
+    ports:
+      - "8000:8000"
 
+
+  object_detection:
+    image: object_detection
+    container_name: objectDetection_flask
+    networks:
+      - mynetwork
+    volumes:
+      - ".:/app"
+    ports:
+      - "5000:5001"
 
 
 networks: 

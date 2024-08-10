@@ -13,4 +13,4 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 
-CMD ["quart", "run", "--port=5000", "--host=0.0.0.0"]
+CMD ["quart", "run", "--port=8080", "--host=0.0.0.0"]
