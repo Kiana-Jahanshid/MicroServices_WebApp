@@ -1,9 +1,7 @@
-Quart
 opencv-python-headless
 sqlmodel
 bcrypt
 pydantic
-tf-keras
 psycopg2-binary
 pillow
 onnxruntime
@@ -11,5 +9,4 @@ Fastapi
 uvicorn
 scikit-image
 pyyaml
-Fastapi
 Flask
