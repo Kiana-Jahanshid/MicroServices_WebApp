@@ -47,7 +47,7 @@ app.secret_key = "my_secret"
 
 # adding new urls 
 face_analysis_microservice_url = "http://127.0.0.1:8000/faceanalysis"
-obj_detection_microservice_url = "http://127.0.0.1:5000/objectdetection"
+obj_detection_microservice_url = "https://object-detection.liara.run/objectdetection"  #  "http://127.0.0.1:5000/objectdetection"
 
 
 
