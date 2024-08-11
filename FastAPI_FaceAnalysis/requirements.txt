@@ -10,3 +10,4 @@ scikit-image
 pyyaml
 Fastapi
 gunicorn
+python-multipart
