@@ -1,14 +1,12 @@
 
 opencv-python-headless
-sqlmodel
 bcrypt
 pydantic
 psycopg2-binary
 pillow
 onnxruntime
-Fastapi
 uvicorn
 scikit-image
 pyyaml
 Fastapi
-Flask
+gunicorn
