@@ -39,5 +39,5 @@ quart --app app run --port 8080
 
 + app link :
 ```
-https://webapplication.liara.run/
+https://local-ruby-kikoo-b82586c8.koyeb.app/
 ```
