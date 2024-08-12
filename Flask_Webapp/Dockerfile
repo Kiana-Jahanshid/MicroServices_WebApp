@@ -11,6 +11,6 @@ RUN pip install scikit-image
 COPY . .
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-
+EXPOSE 8080
 
 CMD ["quart", "run", "--port=8080", "--host=0.0.0.0"]

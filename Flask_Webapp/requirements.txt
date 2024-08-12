@@ -3,7 +3,6 @@ opencv-python-headless
 sqlmodel
 bcrypt
 pydantic
-tf-keras
 psycopg2-binary
 pillow
 onnxruntime
@@ -13,3 +12,4 @@ scikit-image
 pyyaml
 Fastapi
 Flask
+requests

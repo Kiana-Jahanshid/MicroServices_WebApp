@@ -8,3 +8,7 @@ uvicorn
 scikit-image
 pyyaml
 Flask
+quart
+sqlmodel
+Fastapi
+requests

@@ -46,8 +46,8 @@ app.secret_key = "my_secret"
 
 
 # adding new urls 
-face_analysis_microservice_url = "https://microserviceswebapp-production.up.railway.app/faceanalysis"  # "http://127.0.0.1:8000/faceanalysis"
-obj_detection_microservice_url = "https://object-detection.liara.run/objectdetection"                  # "http://127.0.0.1:5000/objectdetection"
+face_analysis_microservice_url = "http://127.0.0.1:8000/faceanalysis" #"https://microserviceswebapp-production.up.railway.app/faceanalysis"  # running on port 8000        # 
+obj_detection_microservice_url = "http://127.0.0.1:5001/objectdetection" #"https://object-detection.liara.run/objectdetection"                  # running on port 80          # 
 
 
 
@@ -403,7 +403,7 @@ async def postdetail(title):
 
 
 if __name__ == "__main__":
-    app.run(debug=True ,host="0.0.0.0" ,port="5000")# for koyeb :  host="0.0.0.0" ,port="5000"
+    app.run(debug=True , host="0.0.0.0" ,port="5000")# for koyeb : 
 
 
 
