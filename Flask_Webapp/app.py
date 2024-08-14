@@ -46,8 +46,8 @@ app.secret_key = "my_secret"
 
 
 # adding new urls 
-face_analysis_microservice_url = "https://microserviceswebapp-production.up.railway.app/faceanalysis" #"http://127.0.0.1:8000/faceanalysis" 
-obj_detection_microservice_url = "https://object-detection.liara.run/objectdetection" #"http://127.0.0.1:5000/objectdetection"     
+face_analysis_microservice_url = "https://microserviceswebapp-production.up.railway.app/faceanalysis" # "http://127.0.0.1:8000/faceanalysis"
+obj_detection_microservice_url = "https://object-detection.liara.run/objectdetection" #    "http://127.0.0.1:5000/objectdetection"# 
 
 
 
@@ -395,7 +395,7 @@ async def editPost(post_id):
 @app.route("/blog/<string:title>")
 async def postdetail(title):
     post = read_a_post(title=title)
-    released_time = "now"#str(post.time_stamp)
+    released_time = str(post.time_stamp)
     parsed_time = datetime.strptime(released_time, '%Y-%m-%d %H:%M:%S.%f')
     formatted_time = parsed_time.strftime('%Y-%m-%d %H:%M:%S')
     post.time_stamp = relative_time_from_string(formatted_time)
