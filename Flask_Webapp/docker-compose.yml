@@ -57,7 +57,7 @@ services:
     networks:
       - aiapp_objdetection
     volumes:
-      - "../Flask_ObjectDetection:/appf"
+      - "../Flask_ObjectDetection:/app"
     ports:
       - "5000:5000"
 
