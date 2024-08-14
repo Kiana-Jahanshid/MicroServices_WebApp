@@ -28,8 +28,6 @@ services:
       - "8080:8080"
     volumes:
       - ".:/app"
-    # environment:
-    #   - DATABASE_URL=postgresql://username:pass@postgr:5432/database
     depends_on:
       - postgres  
       - face_analysis
@@ -39,14 +37,13 @@ services:
   face_analysis:
     image: fastapi
     container_name: FaceAnalysis
-    working_dir: /usr/src/app
     build:
       context: ../FastAPI_FaceAnalysis
       dockerfile: ../FastAPI_FaceAnalysis/Dockerfile
     networks:
       - aiapp_faceanalysis
     volumes:
-      - "../FastAPI_FaceAnalysis:/usr/src/app"
+      - "../FastAPI_FaceAnalysis:./app"
     ports:
       - "8000:8000"
 
